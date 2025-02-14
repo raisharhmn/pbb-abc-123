@@ -418,6 +418,7 @@ img.navbarimg {
   }
 
   .navbar-menu {
+    transform :translateX (100%);
     position: absolute;
     top: 5%;
     right: -100%;
@@ -430,6 +431,7 @@ img.navbarimg {
 
   .navbar-menu.active {
     right: 0;
+    transform : translateX (0);
   }
 
   .navbar-menu a {
