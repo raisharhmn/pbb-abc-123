@@ -318,10 +318,8 @@ img.navbarimg {
   }
 
   .welcome {
-    height: 40vh;
+    height: 70vh;
     background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     overflow-y: hidden;
     margin-bottom: 3rem;
   }
@@ -391,6 +389,15 @@ img.navbarimg {
   html {
     font-size: 100%;
     overflow-x: hidden;
+  }
+
+  .welcome {
+    height: 50vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    margin-bottom: 3rem;
   }
 
   .kegiatanperpus {
