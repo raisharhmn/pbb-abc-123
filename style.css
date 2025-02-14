@@ -418,6 +418,7 @@ img.navbarimg {
   }
 
   .navbar-menu {
+    transform: translateX(100%);
     position: absolute;
     top: 5%;
     right: -100%;
