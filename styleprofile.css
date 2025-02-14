@@ -1,0 +1,388 @@
+:root {
+  --primary: #20681a;
+  --bg: #fdfcfa;
+  --bg1: #e16127;
+  --bg3: #f2f30c;
+  --black: #212122;
+}
+
+* {
+  font-family: "Lato";
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+.profil {
+  width: 100vw;
+  height: 30vh;
+  background-color: rgb(17, 86, 53, 0.7);
+}
+
+.profil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.profil-overlay {
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+}
+
+.profil-overlay h1 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  font-family: "Playfair Display";
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  color: var(--primary);
+}
+
+.program_perpus {
+  display: flex;
+  justify-content: center;
+}
+
+.program-perpus {
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5rem;
+}
+
+.tahun-program {
+  padding: 0 3rem 3rem 3rem;
+}
+.program {
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 67rem;
+}
+
+.program-2022-2023 {
+  display: none;
+}
+
+.program-2022-2023.active {
+  justify-content: space-between;
+  gap: 20px;
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.program-2023-2024 {
+  display: none;
+}
+.program-2023-2024.active {
+  justify-content: space-between;
+  gap: 20px;
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.program-2024-2025 {
+  display: none;
+}
+
+.program-2024-2025.active {
+  justify-content: space-between;
+  gap: 20px;
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.slider {
+  color: var(--primary);
+}
+
+.slider:hover {
+  color: var(--bg1);
+}
+
+.slider-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.slide {
+  height: 2rem;
+  width: 2rem;
+}
+
+.tahun-program h2 {
+  color: #212122;
+  font-size: 2.5rem;
+  font-family: "Playfair Display";
+}
+
+.tahun-program select {
+  width: 10rem;
+  background-color: var(--bg);
+  color: var(--primary);
+  outline: 1px var(--primary) solid;
+  font-weight: 600;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 3rem 0 0 0;
+}
+
+.box1 {
+  min-width: 19.4rem;
+  max-width: 19.5rem;
+  text-align: justify;
+  border: 3px var(--bg1) solid;
+  border-radius: 20px;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  color: var(--black);
+  font-size: 0.9rem;
+}
+
+.box1 h1 {
+  font-family: "Playfair Display";
+  font-size: 1.1rem;
+  color: #3b6354;
+  text-align: center;
+}
+
+.box1 .text-content p span {
+  font-weight: 600;
+  color: #3b6354;
+  font-size: 1rem;
+}
+
+.text-wrap {
+  width: 80%;
+  height: 80%;
+}
+
+.text-wrap p {
+  white-space: normal;
+}
+
+.text-title {
+  margin-bottom: 30px;
+}
+
+.fasilitas-tempat-perpus {
+  padding: 0.5rem 0 5rem 0;
+  background: url(img/bg-kids.svg);
+}
+
+.fasilitas-tempat-perpus h2 {
+  color: var(--black);
+  font-family: "Playfair Display";
+  text-align: center;
+  font-size: 3.7rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.fasil-tempat1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.slider-auto {
+  width: 20rem;
+  height: 20rem;
+  overflow-y: hidden;
+}
+
+@keyframes autoRun {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider-auto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.slider-auto img:hover {
+  opacity: 1;
+}
+
+.img-slider-auto {
+  display: flex;
+  overflow-x: visible;
+  gap: 30px;
+  animation: autoRun 200s linear infinite;
+}
+
+.img-slider-auto ::after {
+  animation-delay: 0.5s;
+  animation: autoRun 200s linear infinite;
+  gap: 30px;
+}
+
+.tata-tertib-alur-pinjam {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.ttap {
+  border: 1px var(--bg1) solid;
+  border-radius: 20px;
+  width: 25rem;
+  height: 25rem;
+  padding: 1rem;
+  box-shadow: var(--bg1) 7px 2px;
+  color: var(--black);
+  background: transparent;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ttap:hover {
+  background: rgb(32, 104, 26, 0.7);
+  color: var(--bg);
+  box-shadow: none;
+  border: none;
+}
+
+.ttap h3 {
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ttap p {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.ttap-text {
+  width: 20rem;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+    overflow-x: hidden;
+  }
+
+  .program-perpus {
+    height: auto;
+  }
+
+  .profil-overlay h1 {
+    font-size: 3rem;
+  }
+
+  .tahunprogram-button button {
+    width: 10rem;
+  }
+
+  .program {
+    width: 50rem;
+  }
+
+  .fasilitas-tempat-perpus h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 100%;
+    overflow-x: hidden;
+  }
+
+  .profil-overlay h1 {
+    font-size: 2.5rem;
+    padding: 0.2rem;
+    text-align: center;
+  }
+
+  .profil-overlay {
+    scrollbar-width: none;
+  }
+
+  .program-perpus {
+    flex-direction: column;
+    width: 25rem;
+    justify-content: center;
+  }
+
+  .tahun-program {
+    width: auto;
+  }
+
+  .program {
+    width: auto;
+  }
+
+  .program-2022-2023 {
+    width: 20rem;
+  }
+
+  .program-2023-2024 {
+    width: 20rem;
+  }
+
+  .program-2024-2025 {
+    width: 20rem;
+  }
+
+  .fasilitas-tempat-perpus h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 75%;
+  }
+}

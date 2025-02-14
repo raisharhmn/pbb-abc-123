@@ -1,0 +1,257 @@
+:root {
+  --primary: #20681a;
+  --bg: #fdfcfa;
+  --bg1: #e16127;
+  --bg3: #f2f30c;
+  --black: #212122;
+}
+
+* {
+  font-family: "Lato";
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+.profil {
+  width: 100vw;
+  height: 30vh;
+  background-color: rgb(17, 86, 53, 0.7);
+}
+
+.profil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.profil-overlay {
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+}
+
+.profil-overlay h1 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  font-family: "Playfair Display";
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  color: var(--primary);
+}
+
+.quotes-pendidikan {
+  margin: 2rem;
+  display: flex;
+  gap: 20px;
+  animation: autoRun 100s linear infinite;
+  width: max-content;
+}
+
+.quotes-pendidikan ::after {
+  animation-delay: 0.5s;
+  margin: 2rem;
+  display: flex;
+  gap: 20px;
+  animation: autoRun 40s linear infinite;
+  width: max-content;
+}
+
+.box-quotes {
+  color: var(--black);
+  width: 20rem;
+  border: 1px var(--black) solid;
+  padding: 1rem;
+  height: 3rem;
+  border-radius: 10px;
+  overflow-y: hidden;
+  opacity: 0.7;
+}
+
+.box-quotes:hover {
+  opacity: 1;
+}
+
+@keyframes autoRun {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.box-quotes h4 {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.box-quotes p {
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: end;
+}
+
+.layanan-perpusdigital h4 {
+  color: var(--primary);
+  font-family: "Playfair Display";
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+hr {
+  margin-left: 2rem;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.layanan-perpus-digital {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  margin: 2rem;
+  overflow-y: hidden;
+}
+/* pindah */
+.dropdown-bbnews {
+  display: flex;
+  justify-content: end;
+  padding-right: 4rem;
+}
+
+.dropdown-bbnews select {
+  width: 10rem;
+  background-color: var(--bg);
+  color: var(--primary);
+  outline: 1px var(--primary) solid;
+  font-weight: 600;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0 1rem 0;
+}
+/*  */
+
+.bukudigital {
+  display: flex;
+  justify-content: center;
+}
+
+.perpus-digital {
+  width: 15%;
+  min-width: 15rem;
+  padding: 0 1.2rem 1rem 1.2rem;
+  justify-content: center;
+  border: 1px var(--primary) solid;
+  box-shadow: var(--primary) 7px 2px;
+  background-color: var(--bg);
+  align-items: center;
+  border-radius: 20px;
+}
+
+.perpus-digital:hover {
+  border: none;
+  transition: 0.3s;
+  background-color: rgb(32, 104, 26, 0.7);
+  box-shadow: none;
+}
+.img-perpusdigital img {
+  width: 200px;
+  height: 200px;
+}
+
+.img-perpusdigital {
+  display: flex;
+  justify-content: center;
+}
+
+.perpus-digital h2 {
+  color: var(--black);
+  font-family: "Playfair Display";
+  font-size: 2rem;
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
+.perpus-digital p {
+  color: var(--black);
+  font-family: "Lato";
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.img-coverbbnews img {
+  width: 10rem;
+}
+
+.box-bbnews h2 {
+  font-size: 1.1rem;
+  font-family: "Lato";
+  color: var(--black);
+  text-align: center;
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.box-bbnews {
+  scale: 1;
+}
+
+.box-bbnews:hover {
+  transition: 0.3s;
+  scale: 1.1;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+    overflow-x: hidden;
+  }
+
+  .profil-overlay h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 100%;
+    overflow-x: hidden;
+  }
+
+  .profil-overlay h1 {
+    font-size: 2.5rem;
+    padding: 0.2rem;
+    text-align: center;
+  }
+
+  .profil-overlay {
+    scrollbar-width: none;
+  }
+
+  .dropdown-bbnews {
+    padding-right: 2rem;
+  }
+}
+
+/* Laptop */
+@media (max-width: 450px) {
+  html {
+    font-size: 75%;
+    overflow-x: hidden;
+  }
+}
