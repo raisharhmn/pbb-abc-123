@@ -393,7 +393,6 @@ img .welcome {
   }
 
   .navbar-menu {
-    transform: translateX(100%);
     position: absolute;
     top: 5%;
     right: -100%;
@@ -407,6 +406,7 @@ img .welcome {
   .navbar-menu.active {
     transform: translateX(0%);
     right: 0;
+    transform: translateX (0);
   }
 
   .navbar-menu a {
