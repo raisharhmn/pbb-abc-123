@@ -47,24 +47,18 @@
   text-decoration: underline;
   text-underline-offset: 10px;
   color: var(--primary);
+  margin: 0 1rem 0 1rem;
 }
 
 .program_perpus {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0 3rem 0;
+  gap: 2rem;
 }
 
-.program-perpus {
-  display: flex;
-  margin-top: 3rem;
-  width: 100%;
-  height: auto;
-  margin-bottom: 5rem;
-}
-
-.tahun-program {
-  padding: 0 3rem 3rem 3rem;
-}
 .program {
   color: var(--black);
   display: flex;
@@ -73,41 +67,14 @@
   width: 67rem;
 }
 
-.program-2022-2023 {
-  display: none;
-}
-
-.program-2022-2023.active {
-  justify-content: space-between;
-  gap: 20px;
-  display: flex;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-}
-
-.program-2023-2024 {
-  display: none;
-}
-.program-2023-2024.active {
-  justify-content: space-between;
-  gap: 20px;
-  display: flex;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-}
-
+.program-2022-2023,
+.program-2023-2024,
 .program-2024-2025 {
   display: none;
 }
 
+.program-2022-2023.active,
+.program-2023-2024.active,
 .program-2024-2025.active {
   justify-content: space-between;
   gap: 20px;
@@ -138,14 +105,9 @@
   width: 2rem;
 }
 
-.tahun-program h2 {
-  color: #212122;
-  font-size: 2.5rem;
-  font-family: "Playfair Display";
-}
-
-.tahun-program select {
-  width: 10rem;
+.program_perpus select {
+  margin-top: 1px;
+  width: 15rem;
   background-color: var(--bg);
   color: var(--primary);
   outline: 1px var(--primary) solid;
@@ -153,7 +115,6 @@
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-  margin: 3rem 0 0 0;
 }
 
 .box1 {
@@ -198,8 +159,9 @@
 }
 
 .fasilitas-tempat-perpus {
+  margin: 3rem 0 0 0;
   padding: 0.5rem 0 5rem 0;
-  background: url(img/bg-kids.svg);
+  height: 95vh;
 }
 
 .fasilitas-tempat-perpus h2 {
@@ -207,84 +169,63 @@
   font-family: "Playfair Display";
   text-align: center;
   font-size: 3.7rem;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.fasil-tempat1 {
+  margin: 0 5px 3rem 5px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 
-.slider-auto {
-  width: 20rem;
-  height: 20rem;
-  overflow-y: hidden;
+.img-fasil {
+  display: flex;
+  justify-content: center;
+}
+.fasil-tempat1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: 90rem;
 }
 
-@keyframes autoRun {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.slider-auto img {
-  width: 100%;
-  height: 100%;
+.fasil-tempat1 img {
+  width: 15rem;
+  height: 15rem;
+  margin: 0.3rem;
   object-fit: cover;
   border-radius: 20px;
+  opacity: 0.8;
 }
 
-.slider-auto img:hover {
+.fasil-tempat1 img:hover {
   opacity: 1;
-}
-
-.img-slider-auto {
-  display: flex;
-  overflow-x: visible;
-  gap: 30px;
-  animation: autoRun 200s linear infinite;
-}
-
-.img-slider-auto ::after {
-  animation-delay: 0.5s;
-  animation: autoRun 200s linear infinite;
-  gap: 30px;
 }
 
 .tata-tertib-alur-pinjam {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 50px;
+  padding: 0 2rem 0 2rem;
+  height: 70vh;
+  background-image: url(img/bg-kids.svg);
+  margin-top: -20px;
 }
 
 .ttap {
   border: 1px var(--bg1) solid;
   border-radius: 20px;
-  width: 25rem;
+  width: 20%;
+  min-width: 20rem;
   height: 25rem;
   padding: 1rem;
   box-shadow: var(--bg1) 7px 2px;
   color: var(--black);
-  background: transparent;
   align-items: center;
   display: flex;
   flex-direction: column;
-}
-
-.ttap:hover {
-  background: rgb(32, 104, 26, 0.7);
-  color: var(--bg);
-  box-shadow: none;
-  border: none;
 }
 
 .ttap h3 {
@@ -330,6 +271,10 @@
   .fasilitas-tempat-perpus h2 {
     font-size: 3rem;
   }
+
+  .fasilitas-tempat-perpus {
+    height: auto;
+  }
 }
 
 /* Tablet */
@@ -360,23 +305,33 @@
   }
 
   .program {
-    width: auto;
+    width: 25rem;
   }
 
-  .program-2022-2023 {
-    width: 20rem;
-  }
-
-  .program-2023-2024 {
-    width: 20rem;
-  }
-
+  .program-2022-2023,
+  .program-2023-2024,
   .program-2024-2025 {
     width: 20rem;
   }
 
   .fasilitas-tempat-perpus h2 {
     font-size: 2rem;
+  }
+
+  .fasil-tempat1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .fasil-tempat1 img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .tata-tertib-alur-pinjam {
+    margin-bottom: 4rem;
+    gap: 20px;
+    height: auto;
   }
 }
 
